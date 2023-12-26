@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Under The Mistletoe</title>
+    <link rel="stylesheet" type="text/css" href="all_songs.css" />
+    <link rel="stylesheet" type="text/css" href="header_footer.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="homepage.html"><img src="logo.png" alt="" /></a>
+      <nav class="navbar">
+        <ul>
+          <li><a href="homepage.html">Home</a></li>
+          <li><a href="Artist.html">Artists</a></li>
+          <li><a href="Album.html">Albums</a></li>
+          <li><a href="songs.html">Songs</a></li>
+          <li><a href="search.html">Search</a></li>
+          <li><a href="spotlight.html">Artist Spotlight</a></li>
+          <li><a href="playlist.html">Playlist</a></li>
+
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <pre></pre>
+    <div class="container">
+      <h1 class="title">Under The Mistletoe</h1>
+      <img src="Underthemilestone.jpg" alt="Album Cover" class="album-cover" />
+      <ul class="song-list">
+        <li class="song">
+          <div class="song-title">Only Thing I Ever Get for Christmas</div>
+          <div class="song-length">3:12</div>
+          <button class="add-to-playlist" data-name="Only Thing I Ever Get for Christmas" data-duration="3min 12sec">Add to Playlist</button>
+
+        </li>
+        <li class="song">
+          <div class="song-title">Mistletoe</div>
+          <div class="song-length">3:02</div>
+          <button class="add-to-playlist" data-name="Mistletoe" data-duration="3min 02sec">Add to Playlist</button>
+
+        </li>
+        <li class="song">
+          <div class="song-title">
+            The Christmas Song (Chestnuts Roasting on an Open Fire)
+          </div>
+          <div class="song-length">3:35</div>
+          <button class="add-to-playlist" data-name="The Christmas Song (Chestnuts Roasting on an Open Fire)" data-duration="3min 35sec">Add to Playlist</button>
+
+        </li>
+        <li class="song">
+          <div class="song-title">Santa Claus Is Coming to Town</div>
+          <div class="song-length">3:36</div>
+          <button class="add-to-playlist" data-name="Santa Claus Is Coming to Town" data-duration="3min 36sec">Add to Playlist</button>
+
+        </li>
+        <li class="song">
+          <div class="song-title">Fa La La</div>
+          <div class="song-length">3:06</div>
+          <button class="add-to-playlist" data-name="Fa La La" data-duration="3min 06sec">Add to Playlist</button>
+
+        </li>
+      </ul>
+    </div>
+    <footer>
+      <ul>
+        <p style="font-size: 23px">
+          <a style="padding: 5px" href="about.html">About</a>
+          "Music is a higher form of knowledge than words." - Napoleon Bonaparte
+        </p>
+      </ul>
+      <div style="text-align: center; font-size: 26px">
+        Made with &hearts; by
+        <a
+          style="font-size: 26px; padding: 5px"
+          href="https://www.linkedin.com/in/harsh-gupta-4ba4a7254"
+          >Harsh</a
+        >
+        <a
+          style="font-size: 26px; padding: 5px"
+          href="https://www.linkedin.com/in/tanishq-agarwal-a49609262"
+          >Tanishq</a
+        >
+      </div>
+    </footer>
+  </body>
+  <script>
+    const addToPlaylistButtons = document.querySelectorAll('.add-to-playlist');
+    addToPlaylistButtons.forEach(button => {
+        // remove the click event listener on the button
+        button.removeEventListener('click', null);
+
+        button.addEventListener('click', () => {
+            const name = button.getAttribute('data-name');
+            const duration = button.getAttribute('data-duration');
+            const song = {
+                name,
+                duration
+            };
+            let playlist = JSON.parse(localStorage.getItem('playlist')) || [];
+
+            // check if the song is already in the playlist
+            const songIndex = playlist.findIndex(item => item.name === name && item.duration === duration);
+            if (songIndex !== -1) {
+                alert('Song is already in the playlist!');
+                return;
+            }
+
+            playlist.push(song);
+            localStorage.setItem('playlist', JSON.stringify(playlist));
+            // alert('Song added to playlist!');
+        });
+    });
+</script>
+
+  <script src="header_footer.js"></script>
+</html>

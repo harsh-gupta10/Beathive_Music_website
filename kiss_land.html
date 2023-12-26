@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>The Kiss Land</title>
+  <link rel="stylesheet" type="text/css" href="all_songs.css" />
+  <link rel="stylesheet" type="text/css" href="header_footer.css" />
+</head>
+
+<body>
+  <header class="header">
+    <a href="homepage.html"><img src="logo.png" alt="" /></a>
+    <nav class="navbar">
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="Artist.html">Artists</a></li>
+        <li><a href="Album.html">Albums</a></li>
+        <li><a href="songs.html">Songs</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="playlist.html">Playlist</a></li>
+
+        <li><a href="spotlight.html">Artist Spotlight</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <pre></pre>
+  <div class="container">
+    <h1 class="title">The Kiss Land</h1>
+    <img class="album-cover" src="kissLand.jpg" alt="The Kiss Land Album Cover" />
+    <ul class="song-list">
+      <li class="song">
+        <div class="song-title">Professional</div>
+        <div class="song-length">5:05</div>
+        <button class="add-to-playlist" data-name="Professional" data-duration="5min 05sec">Add to Playlist</button>
+      </li>
+      <li class="song">
+        <div class="song-title">The Town</div>
+        <div class="song-length">5:06</div>
+        <button class="add-to-playlist" data-name="The Town" data-duration="5min 06sec">Add to Playlist</button>
+      </li>
+      <li class="song">
+        <div class="song-title">Adaptation</div>
+        <div class="song-length">4:44</div>
+        <button class="add-to-playlist" data-name="Adaptation" data-duration="4min 44sec">Add to Playlist</button>
+      </li>
+      <li class="song">
+        <div class="song-title">Love in the Sky</div>
+        <div class="song-length">4:28</div>
+        <button class="add-to-playlist" data-name="Love in the Sky" data-duration="4min 48sec">Add to Playlist</button>
+      </li>
+      <li class="song">
+        <div class="song-title">Belong to the World</div>
+        <div class="song-length">4:07</div>
+        <button class="add-to-playlist" data-name="Belong to the World" data-duration="4min 07sec">Add to Playlist</button>
+      </li>
+
+    </ul>
+  </div>
+  <footer>
+    <ul>
+      <p style="font-size: 23px">
+        <a style="padding: 5px" href="about.html">About</a>
+        "Music is a higher form of knowledge than words." - Napoleon Bonaparte
+      </p>
+    </ul>
+    <div style="text-align: center; font-size: 26px">
+      Made with &hearts; by
+      <a style="font-size: 26px; padding: 5px" href="https://www.linkedin.com/in/harsh-gupta-4ba4a7254">Harsh</a>
+      <a style="font-size: 26px; padding: 5px" href="https://www.linkedin.com/in/tanishq-agarwal-a49609262">Tanishq</a>
+    </div>
+  </footer>
+</body>
+<script>
+  const addToPlaylistButtons = document.querySelectorAll('.add-to-playlist');
+  addToPlaylistButtons.forEach(button => {
+    // remove the click event listener on the button
+    button.removeEventListener('click', null);
+
+    button.addEventListener('click', () => {
+      const name = button.getAttribute('data-name');
+      const duration = button.getAttribute('data-duration');
+      const song = {
+        name,
+        duration
+      };
+      let playlist = JSON.parse(localStorage.getItem('playlist')) || [];
+
+      // check if the song is already in the playlist
+      const songIndex = playlist.findIndex(item => item.name === name && item.duration === duration);
+      if (songIndex !== -1) {
+        alert('Song is already in the playlist!');
+        return;
+      }
+
+      playlist.push(song);
+      localStorage.setItem('playlist', JSON.stringify(playlist));
+      // alert('Song added to playlist!');
+    });
+  });
+</script>
+<script src="header_footer.js"></script>
+
+</html>

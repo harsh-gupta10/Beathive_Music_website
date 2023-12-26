@@ -1,0 +1,253 @@
+/* Center the content */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(39, 38, 38);
+}
+
+#artist_name{
+  color: rgb(22, 236, 236);
+  font-size: 100px;
+  margin-top: 90px;
+}
+
+/* Style the artist's image */
+#artist-image {
+  width: 600px;
+  height: auto;
+  /* margin: 20px; */
+  margin-bottom: 110px;
+  margin-top: 60px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+/* Add the zoom-in/zoom-out animation */
+#artist-image.zoom-in {
+  animation: zoom-in 1s forwards;
+}
+#artist-image.zoom-out {
+  animation: zoom-out 1s forwards;
+}
+@keyframes zoom-in {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+@keyframes zoom-out {
+  from {
+    transform: scale(1.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+/* Style the review form */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+#name_input_id{
+  color: aliceblue;
+  margin: 5px;
+  font: size 60px;
+}
+#rating_id{
+  color: aliceblue;
+  font: size 30px;
+  margin: 5px;
+
+}
+#review_input_id{
+  color: aliceblue;
+  font: size 30px;
+  margin: 5px;
+}
+
+#rating-input{
+  color: aliceblue;
+  font: size 30px;
+  margin: 5px;
+}
+
+label {
+  margin: 10px;
+}
+input[type="submit"] {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  size: 40px;
+}
+
+
+input[type="submit"] :hover{
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #0f110f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/* Style the reviews table */
+table {
+  border-collapse: collapse;
+  margin: 20px;
+}
+/* th, */
+td {
+  padding: 10px;
+  border: 1px solid black;
+}
+th {
+  text-align: left;
+}
+
+#reviews-table{
+  color: rgb(12, 64, 110);
+  font: size 30px;
+  margin: 5px;
+}
+
+
+
+
+
+/* Style the countdown timer */
+
+#review-form{
+  size: 50px;
+  font-size: 30px;
+}
+
+
+#typewriter{
+color: rgb(230, 60, 37);
+font-size: 25px;
+/* margin: 20px; */
+margin-left: 150px;
+margin-right: 150px;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+#Before_countdown{
+  /* margin: 20px; */
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: rgb(70, 254, 190);
+}
+
+#countdown{
+  margin: 20px;
+  font-size: 80px;
+  color: rgb(70, 254, 190);
+  font-weight: 900;
+}
+
+.review-form {
+  margin-bottom: 20px;
+}
+
+.review-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.review-form input[type="text"],
+.review-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.rating input[type="radio"] {
+  background-color: yellow;
+  display: none;
+}
+
+.rating label {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 2px;
+  /* background-image: url("untitled.png"); */
+  /* background-image: url("https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/svgs/solid/star.svg");
+   */
+   background-image: url("whitestar\ \(1\).png");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input[type="radio"]:checked ~ label {
+  background-image: url("untitled.png");
+}
+
+#reviews-table {
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-weight: bold;
+  color: rgb(15, 175, 175)
+  /* font-size: 45px; */
+
+}
+
+#reviews-table th{
+  
+    padding: 10px;
+  
+}
+#reviews-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  padding: 10px;
+  text-align: center;
+}
+
+#reviews-table th {
+  /* background-color: #504f73; */
+}
+
+.star-rating .fa {
+  color: #ddd;
+  cursor: pointer;
+}
+
+.star-rating .fa:hover,
+.star-rating .fa:hover ~ .fa {
+  color: #FFD700;
+}
+
+.star-rating input[type="radio"]:checked + label .fa {
+  color: #FFD700;
+}
+

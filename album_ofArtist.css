@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+:root {
+    --main-bg-color: #2874f0;
+}
+
+
+.card{
+    max-width: 91vw;
+    margin: 37px auto;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.card1{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: antiquewhite;
+    font-weight: bolder;
+    font-size: 60px;
+    padding-top: 300px;
+    padding-left: 100px;
+        font-size: 80px;
+        color: #fff;
+        text-align: center;
+        text-shadow: 0 0 5px #fff, 0 0 1px #fff, 0 0 1px #0073e6, 0 0 2px #0073e6, 0 0 2px #0073e6, 0 0 3px #0073e6, 0 0 35px #0073e6;
+}
+
+.cards{
+    display: flex; 
+    overflow: hidden;
+}
+
+.cards1{
+    margin-bottom: 3px;
+    display: flex; 
+    overflow: hidden;
+    /* justify-content: center; */
+    width: 100%;
+    /* background-image: url(talyorswift\ \(copy\).jpeg); */
+    height: 1100px;
+    object-fit: cover;
+    background-repeat:no-repeat
+    
+}
+
+.card-item{
+    
+    padding-left: 8px;
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 20px;
+    /* margin-top: 20px; */
+}
+
+.card h1{
+    text-shadow: 0 0 5px #fff, 0 0 1px #fff, 0 0 1px #0073e6, 0 0 2px #0073e6, 0 0 2px #0073e6, 0 0 3px #0073e6, 0 0 35px #0073e6;
+
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: antiquewhite;
+    font-weight: bolder;
+    font-size: 60px;
+}
+.lines{
+    color: rgb(236, 226, 210);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight:600;
+    font-size: 32px;
+    text-align: center;
+}
+
+.card-item :hover{
+    background-color: rgba(44, 42, 48,0.45);
+    filter: brightness(105%);
+    transform: scale(1.012);
+    transition: background-color 0.4s;
+    transition: transform 0.75s;
+    /* transform:; */
+}
+
+a{
+    text-decoration: none;
+}

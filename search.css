@@ -1,0 +1,253 @@
+/* body {
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+} */
+
+h1 {
+  margin: 0;
+}
+
+form {
+  display: flex;
+  margin-top: 10px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#filters {
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+}
+
+label {
+  margin-right: 10px;
+}
+
+input[type="number"] {
+  width: 50px;
+  margin-right: 10px;
+}
+
+select {
+  margin-right: 10px;
+}
+
+button[type="button"] {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+main {
+  padding: 20px;
+}
+
+#results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.result {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  transition: transform 0.2s;
+}
+
+.result:hover {
+  transform: translateY(-5px);
+}
+
+.result img {
+  width: 100%;
+}
+
+.result h2 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.result p {
+  margin: 0;
+}
+
+.audio-player {
+  margin-top: 10px;
+}
+
+.audio-player audio {
+  width: 100%;
+}
+/* s.css */
+
+/* reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  header {
+    background-color: #0074D9;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 32px;
+    margin: 0;
+  }
+  
+  #search-form {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  #search-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  #search-button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #0074D9;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  
+  #filters {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  #filters label {
+    margin-right: 10px;
+  }
+  
+  #duration-filter {
+    width: 70px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  #explicit-filter {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  #filter-button,
+  #clear-button {
+    margin-left: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #0074D9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #results {
+    margin-top: 20px;
+  }
+  
+
+  #search_header{
+    margin: 60px;
+    padding: 30px;
+    background-color: rgb(1, 2, 17);
+    /* color: #52f7d3; */
+    color: aqua;
+    font-size: 30px;
+  }
+  #BeatHive_Search{
+    text-align: center;
+    /* color: #fff; */
+    color: #52f7d3;
+    font-size: 80px;
+  }
+  #search-button{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 184, 0);
+    font-weight: bolder;
+    font-size: 30px;
+  }
+  #clear-button{
+    color: rgb(255, 255, 255);
+    background-color: rgb(187, 3, 3);
+    font-weight: bold;
+    font-size: 20px;
+  }
+  #filter-button{
+    color: rgb(255, 255, 255);
+    background-color: rgb(187, 3, 3);
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+
+
+  /* #search-button :hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(5, 206, 5);
+  }
+  #clear-button :hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(214, 10, 10);
+  }
+  #filter-button :hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(214, 10, 10);
+  } */
+  
+  .result{
+    color: rgb(233, 240, 240);
+    background-color: #030325;
+    /* border:#000000 ; */
+    border-radius: 10px;
+    border-color: #000000 ;
+    border: 20px;
+    /* font-size: 20px; */
+  }

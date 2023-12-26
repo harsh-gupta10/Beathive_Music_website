@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Spotlight Artist</title>
+    <link rel="stylesheet" href="spotlight.css">
+    <link rel="stylesheet" type="text/css" href="header_footer.css">
+</head>
+
+<body style="background-image: url('Dark\,\ blurry\,\ simple\ background\,\ blue-green\ abstract\ background\ gradient\ blur\,\ Studio\ light_.jpeg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;">
+    
+
+    <header class="header">
+        <a href="homepage.html"><img src="logo.png" alt=""></a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="Artist.html">Artists</a></li>
+                <li><a href="Album.html">Albums</a></li>
+                <li><a href="songs.html">Songs</a></li>
+                <li><a href="search.html">Search</a></li>
+          <li><a href="playlist.html">Playlist</a></li>
+
+                <li><a style="color: aquamarine;" href="spotlight.html">Artist Spotlight</a></li>
+                
+
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    
+</header>
+    
+    <h1 id="artist_name">Arijit Singh</h1>
+    <img id="artist-image" src="FavArtist.jpg" alt="My favorite artist">
+    <!-- <p>My favorite artist is [Artist Name], [short description of the artist].</p> -->
+    <p id="typewriter"></p>
+
+
+    <!-- Review form -->
+    <form id="review-form">
+        <label id="name_input_id" for="name-input" style="color: aqua; font-size: 40px;">Your name:</label>
+        <input type="text" required style="width: 252px; height: 49px; font-size: 25px;" id="name-input">
+        <!-- <pre> 
+        </pre> -->
+        <label id="rating_id" for="rating-input" style="color: aqua; font-size: 45px;">Rating:</label>
+        <!-- <div id="rating-input">
+            <input type="radio" name="rating" value="1" required >1
+            <input type="radio" name="rating" value="2">2
+            <input type="radio" name="rating" value="3">3
+            <input type="radio" name="rating" value="4">4
+            <input type="radio" name="rating" value="5">5
+        </div> -->
+        <div class="rating">
+            <input type="radio" id="star5" name="rating" value="5">
+            <label for="star5" title="5 stars"></label>
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4" title="4 stars"></label>
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3" title="3 stars"></label>
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2" title="2 stars"></label>
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1" title="1 star"></label>
+            </div>
+        <label id="review_input_id" for="review-input" style="color: aqua; font-size: 50px;">Review:</label>
+        <textarea id="review-input" required style="width: 552px; height: 179px; font-size: 30px;"></textarea>
+        <input type="submit" style="width: 150px; height: 60px; font-size: 32px;" value="Submit">
+    </form>
+
+    <!-- Reviews table -->
+    <table id="reviews-table" style="text-align: center; font-size: 40px;">
+        <thead>
+            <tr>
+                <th style="text-align: center;">Name</th>
+                <th  style="text-align: center;">Rating</th>
+                <th style="text-align: center;" >Review</th>
+            </tr>
+        </thead>
+        <tbody> 
+        </tbody>
+    </table>
+
+    
+
+    <!-- <div id="countdown-t">
+        <h1 id="headingCountdown">countdown For Next Song</h1>
+        <h1 id="relasetime">30th June 2023 00:00.</h1>
+
+    </div> -->
+
+    <div id="Before_countdown" >
+        <h1>
+            Time Left For Next Release
+        </h1>
+    </div>
+    <div id="countdown"></div>
+        
+
+    <footer>
+        <ul>
+            <p style="font-size: 23px;" >
+                <a style="padding: 5px;" href="about.html">About</a>
+                "Music is a higher form of knowledge than words." - Napoleon Bonaparte
+            </p>
+        </ul>
+        <div style="text-align: center;font-size: 26px;">
+            Made with &hearts; by <a style="font-size: 26px;padding: 5px;" href="https://www.linkedin.com/in/harsh-gupta-4ba4a7254">Harsh Gupta</a> <a
+                style="font-size: 26px;padding: 5px;" href="https://www.linkedin.com/in/tanishq-agarwal-a49609262"> Tanishq Agarwal</a>
+        </div>
+    </footer>
+</body>
+
+<!-- <script src="art.js"></script> -->
+<script src="spotlight.js"></script>
+<script src="header_footer.js"></script>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Revival</title>
+    <link rel="stylesheet" href="all_songs.css" />
+    <link rel="stylesheet" type="text/css" href="header_footer.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="homepage.html"><img src="logo.png" alt="" /></a>
+      <nav class="navbar">
+        <ul>
+          <li><a href="homepage.html">Home</a></li>
+          <li><a href="Artist.html">Artists</a></li>
+          <li><a href="Album.html">Albums</a></li>
+          <li><a href="songs.html">Songs</a></li>
+          <li><a href="search.html">Search</a></li>
+          <li><a href="playlist.html">Playlist</a></li>
+
+          <li><a href="spotlight.html">Artist Spotlight</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <pre></pre>
+    <div class="container">
+      <h1 class="title">Revival</h1>
+      <img class="album-cover" src="revival.jpeg" />
+      <ul class="song-list">
+        <li class="song">
+          <span class="song-title">Walk on Water</span>
+          <span class="song-length">5:04</span>
+          <button class="add-to-playlist" data-name="Walk on Water" data-duration="5min 04sec">Add to Playlist</button>
+
+        </li>
+        <li class="song">
+          <span class="song-title">Believe</span>
+          <span class="song-length">5:15</span>
+          <button class="add-to-playlist" data-name="Believe" data-duration="5min 15sec">Add to Playlist</button>
+
+        </li>
+        <li class="song">
+          <span class="song-title">Chloraseptic</span>
+          <span class="song-length">5:01</span>
+          <button class="add-to-playlist" data-name="Chloraseptic" data-duration="5min 01sec">Add to Playlist</button>
+
+        </li>
+        <li class="song">
+          <span class="song-title">Untouchable</span>
+          <span class="song-length">6:10</span>
+          <button class="add-to-playlist" data-name="Untouchable" data-duration="6min 10sec">Add to Playlist</button>
+
+        </li>
+        <li class="song">
+          <span class="song-title">River</span>
+          <span class="song-length">3:41</span>
+          <button class="add-to-playlist" data-name="River" data-duration="3min 41sec">Add to Playlist</button>
+
+        </li>
+      </ul>
+    </div>
+    <footer>
+      <ul>
+        <p style="font-size: 23px">
+          <a style="padding: 5px" href="about.html">About</a>
+          "Music is a higher form of knowledge than words." - Napoleon Bonaparte
+        </p>
+      </ul>
+      <div style="text-align: center; font-size: 26px">
+        Made with &hearts; by
+        <a
+          style="font-size: 26px; padding: 5px"
+          href="https://www.linkedin.com/in/harsh-gupta-4ba4a7254"
+          >Harsh</a
+        >
+        <a
+          style="font-size: 26px; padding: 5px"
+          href="https://www.linkedin.com/in/tanishq-agarwal-a49609262"
+          >Tanishq</a
+        >
+      </div>
+    </footer>
+  </body>
+  <script>
+    const addToPlaylistButtons = document.querySelectorAll('.add-to-playlist');
+    addToPlaylistButtons.forEach(button => {
+        // remove the click event listener on the button
+        button.removeEventListener('click', null);
+
+        button.addEventListener('click', () => {
+            const name = button.getAttribute('data-name');
+            const duration = button.getAttribute('data-duration');
+            const song = {
+                name,
+                duration
+            };
+            let playlist = JSON.parse(localStorage.getItem('playlist')) || [];
+
+            // check if the song is already in the playlist
+            const songIndex = playlist.findIndex(item => item.name === name && item.duration === duration);
+            if (songIndex !== -1) {
+                alert('Song is already in the playlist!');
+                return;
+            }
+
+            playlist.push(song);
+            localStorage.setItem('playlist', JSON.stringify(playlist));
+            // alert('Song added to playlist!');
+        });
+    });
+</script>
+  <script src="header_footer.js"></script>
+</html>

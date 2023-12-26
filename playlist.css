@@ -1,0 +1,74 @@
+    /* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+background-image: url('Dark\,\ blurry\,\ simple\ background\,\ blue-green\ abstract\ background\ gradient\ blur\,\ Studio\ light_.jpeg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+color: antiquewhite;
+font-size:50px;
+font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 200px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+
+
+button {
+    background-color: #ff0303;
+  color: rgb(239, 234, 234);
+  padding: 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  /* margin-left: auto; */
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #ae1818;
+  color: rgb(255, 255, 255);
+}
+
+/* Styles for the playlist */
+#playlist {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+span {
+    margin-right: 10px;
+}
+li div{
+    font-size: 20px;
+}
+ul li:hover{
+    filter: brightness(120%);
+    transform: scale(1.4);
+    transition: background-color 0.4s;
+    transition: transform 0.6s;
+}

@@ -1,0 +1,24 @@
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+.main_text{
+    width: 60%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    color: azure;
+    padding-left: 40px;
+    font-weight: 700px;
+}
+.main_text h1{
+    color: rgb(13, 181, 223);
+}
+.cards{
+    padding-left: 135px;
+}
+a{
+    text-decoration: none;
+}

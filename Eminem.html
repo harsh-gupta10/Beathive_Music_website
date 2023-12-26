@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eminem</title>
+    <link rel="stylesheet" href="album_ofArtist.css">
+    <!-- <link rel="stylesheet" href="utils.css"> -->
+    <!-- <link rel="stylesheet" href="responsive.css"> -->
+    <link rel="stylesheet" href="header_footer.css">
+
+
+</head>
+
+<body style="background-color: rgb(34, 32, 37);">
+
+    <header class="header">
+        <a href="homepage.html"><img src="logo.png" alt=""></a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="Artist.html">Artists</a></li>
+                <li><a href="Album.html">Albums</a></li>
+                <li><a href="songs.html">Songs</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="playlist.html">Playlist</a></li>
+
+                <li><a href="spotlight.html">Artist Spotlight</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- <pre>
+
+    </pre> -->
+
+    <div class="cards1" style="background-image: url(IMG_20230409_003634.jpg);">
+        <!-- <img src="justin-bieber-pictures-vcm4q25ejfwyrit7.jpg" alt=""> -->
+        <div class="card1">
+
+            <h1 class="my-2">Eminem</h1>
+        </div>
+
+
+    </div>
+
+    <!-- </div> -->
+
+    <div class="card">
+        <!-- <h1  class="my-2">Eminem</h1> -->
+        <br>
+        <br>
+        <br>
+        <div class="cards">
+
+            <div class="card-item">
+                <a href="kamikaze.html">
+                    <img src="kamikaze.jpg" alt="" width="280px">
+                    <div class="lines">
+                        <p class="text-center my-1"> Kamikaze - 2018 Songs: 13</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card-item">
+                <a href="Marshalls_Mather_lp.html">
+                    <img src="marshalls.png" alt="" width="280px">
+                    <div class="lines">
+                        <p class="text-center my-1"> Marshall LP - 2000 Songs: 18</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card-item">
+                <a href="Music_Murder.html">
+                    <img src="musicmurder.jpg" alt="" width="280px">
+                    <div class="lines">
+                        <p class="text-center my-1"> Music to be Murdered - 2020 Songs: 20</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card-item">
+                <a href="revival.html">
+                    <img src="revival.jpeg" alt="" width="280px">
+                    <div class="lines">
+                        <p class="text-center my-1"> Revival - 2017 Songs: 19</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card-item">
+                <a href="Curtaincall2.html">
+                    <img src="curtaincall2.jpeg" alt="" width="280px">
+                    <div class="lines">
+                        <p class="text-center my-1"> Curtain 2 - 2022 Songs: 17</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <ul>
+            <p style="font-size: 23px;">
+                <a style="padding: 5px;" href="about.html">About</a>
+                "Music is a higher form of knowledge than words." - Napoleon Bonaparte
+            </p>
+        </ul>
+        <div style="text-align: center;font-size: 26px;">
+            Made with &hearts; by <a style="font-size: 26px;padding: 5px;"
+                href="https://www.linkedin.com/in/harsh-gupta-4ba4a7254">Harsh</a> <a
+                style="font-size: 26px;padding: 5px;"
+                href="https://www.linkedin.com/in/tanishq-agarwal-a49609262">Tanishq</a>
+        </div>
+    </footer>
+</body>
+<script>
+    const addToPlaylistButtons = document.querySelectorAll('.add-to-playlist');
+    addToPlaylistButtons.forEach(button => {
+        // remove the click event listener on the button
+        button.removeEventListener('click', null);
+
+        button.addEventListener('click', () => {
+            const name = button.getAttribute('data-name');
+            const duration = button.getAttribute('data-duration');
+            const song = {
+                name,
+                duration
+            };
+            let playlist = JSON.parse(localStorage.getItem('playlist')) || [];
+
+            // check if the song is already in the playlist
+            const songIndex = playlist.findIndex(item => item.name === name && item.duration === duration);
+            if (songIndex !== -1) {
+                alert('Song is already in the playlist!');
+                return;
+            }
+
+            playlist.push(song);
+            localStorage.setItem('playlist', JSON.stringify(playlist));
+            // alert('Song added to playlist!');
+        });
+    });
+</script>
+<script src="header_footer.js"></script>
+
+</html
