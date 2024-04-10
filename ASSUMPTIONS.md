@@ -12,7 +12,7 @@ We have made a Album Page that has All Album of All artists form here we can go 
 and if we click on any album then we can directly go to song page of that album
 
 And in Song page we have list of all Songs of all Albums of all Artist. Nothing in this page is clickable (except header and footer)
-We have also made song page for each Album by clicking on any album throughout our website (i.e in Album page or Album page of each Artist OR Homepage ) User can to to this page 
+We have also made song page for each Album by clicking on any album throughout our website (i.e in Album page or Album page of each Artist OR index ) User can to to this page
 
 On clicking on logo of our website User can go to Home page directly
 

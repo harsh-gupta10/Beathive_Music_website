@@ -1,105 +1,115 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Playlist</title>
-</head>
-<link rel="stylesheet" href="header_footer.css">
-<link rel="stylesheet" href="playlist.css">
+  </head>
+  <link rel="stylesheet" href="header_footer.css" />
+  <link rel="stylesheet" href="playlist.css" />
 
-
-<body style="
-background-image: url('bg.jpg');
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-size: cover;
-" >
+  <body
+    style="
+      background-image: url('bg.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    "
+  >
     <header class="header">
-        <a href="homepage.html"><img src="logo.png" alt="" /></a>
-        <nav class="navbar">
-            <ul>
-                <li><a href="homepage.html">Home</a></li>
-                <li><a href="Artist.html">Artists</a></li>
-                <li><a href="Album.html">Albums</a></li>
-                <li><a href="songs.html">Songs</a></li>
-                <li><a href="search.html">Search</a></li>
-                <li><a style="color: aquamarine;" href="playlist.html">Playlist</a></li>
-                <li><a href="spotlight.html">Artist Spotlight</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
+      <a href="index.html"><img src="logo.png" alt="" /></a>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Artist.html">Artists</a></li>
+          <li><a href="Album.html">Albums</a></li>
+          <li><a href="songs.html">Songs</a></li>
+          <li><a href="search.html">Search</a></li>
+          <li>
+            <a style="color: aquamarine" href="playlist.html">Playlist</a>
+          </li>
+          <li><a href="spotlight.html">Artist Spotlight</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
     </header>
     <h1>My Playlist</h1>
-    <ul id="playlist">
-    </ul>
+    <ul id="playlist"></ul>
 
     <script>
-        const playlist = JSON.parse(localStorage.getItem('playlist')) || [];
-        const renderPlaylist = () => {
-            const playlistElement = document.getElementById('playlist');
-            playlistElement.innerHTML = '';
-            playlist.forEach((song, index) => {
-                const listItem = document.createElement('li');
-                const songName = document.createElement('span');
-                const songDuration = document.createElement('div');
-                const removeButton = document.createElement('button');
+      const playlist = JSON.parse(localStorage.getItem("playlist")) || [];
+      const renderPlaylist = () => {
+        const playlistElement = document.getElementById("playlist");
+        playlistElement.innerHTML = "";
+        playlist.forEach((song, index) => {
+          const listItem = document.createElement("li");
+          const songName = document.createElement("span");
+          const songDuration = document.createElement("div");
+          const removeButton = document.createElement("button");
 
-                songName.innerText = song.name;
-                songDuration.innerText = `(${song.duration})`;
-                removeButton.innerText = 'Remove';
-                removeButton.addEventListener('click', () => {
-                    playlist.splice(index, 1);
-                    localStorage.setItem('playlist', JSON.stringify(playlist));
-                    renderPlaylist();
-                });
+          songName.innerText = song.name;
+          songDuration.innerText = `(${song.duration})`;
+          removeButton.innerText = "Remove";
+          removeButton.addEventListener("click", () => {
+            playlist.splice(index, 1);
+            localStorage.setItem("playlist", JSON.stringify(playlist));
+            renderPlaylist();
+          });
 
-                listItem.appendChild(songName);
-                listItem.appendChild(songDuration);
-                listItem.appendChild(removeButton);
-                playlistElement.appendChild(listItem);
-            });
-        };
-
-        const addToPlaylistButtons = document.querySelectorAll('.add-to-playlist');
-        addToPlaylistButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const name = button.getAttribute('data-name');
-                const duration = button.getAttribute('data-duration');
-                const song = {
-                    name,
-                    duration
-                };
-
-                const songIndex = playlist.findIndex(item => item.name === name && item.duration === duration);
-                if (songIndex !== -1) {
-                    alert('Song is already in the playlist!');
-                    return;
-                }
-
-                playlist.push(song);
-                localStorage.setItem('playlist', JSON.stringify(playlist));
-                renderPlaylist();
-                // alert('Song added to playlist!');
-            });
+          listItem.appendChild(songName);
+          listItem.appendChild(songDuration);
+          listItem.appendChild(removeButton);
+          playlistElement.appendChild(listItem);
         });
+      };
 
-        renderPlaylist();
+      const addToPlaylistButtons =
+        document.querySelectorAll(".add-to-playlist");
+      addToPlaylistButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const name = button.getAttribute("data-name");
+          const duration = button.getAttribute("data-duration");
+          const song = {
+            name,
+            duration,
+          };
+
+          const songIndex = playlist.findIndex(
+            (item) => item.name === name && item.duration === duration
+          );
+          if (songIndex !== -1) {
+            alert("Song is already in the playlist!");
+            return;
+          }
+
+          playlist.push(song);
+          localStorage.setItem("playlist", JSON.stringify(playlist));
+          renderPlaylist();
+          // alert('Song added to playlist!');
+        });
+      });
+
+      renderPlaylist();
     </script>
     <footer>
-        <ul>
-            <p style="font-size: 23px">
-                <a style="padding: 5px" href="about.html">About</a>
-                "Music is a higher form of knowledge than words." - Napoleon Bonaparte
-            </p>
-        </ul>
-        <div style="text-align: center; font-size: 26px">
-            Made with &hearts; by
-            <a style="font-size: 26px; padding: 5px" href="https://www.linkedin.com/in/harsh-gupta-4ba4a7254">Harsh</a>
-            <a style="font-size: 26px; padding: 5px"
-                href="https://www.linkedin.com/in/tanishq-agarwal-a49609262">Tanishq</a>
-        </div>
+      <ul>
+        <p style="font-size: 23px">
+          <a style="padding: 5px" href="about.html">About</a>
+          "Music is a higher form of knowledge than words." - Napoleon Bonaparte
+        </p>
+      </ul>
+      <div style="text-align: center; font-size: 26px">
+        Made with &hearts; by
+        <a
+          style="font-size: 26px; padding: 5px"
+          href="https://www.linkedin.com/in/harsh-gupta-4ba4a7254"
+          >Harsh</a
+        >
+        <a
+          style="font-size: 26px; padding: 5px"
+          href="https://www.linkedin.com/in/tanishq-agarwal-a49609262"
+          >Tanishq</a
+        >
+      </div>
     </footer>
-</body>
-<script src="header_footer.js"></script>
-
+  </body>
+  <script src="header_footer.js"></script>
 </html>

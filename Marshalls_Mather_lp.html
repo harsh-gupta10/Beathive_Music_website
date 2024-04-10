@@ -8,10 +8,10 @@
   </head>
   <body>
     <header class="header">
-      <a href="homepage.html"><img src="logo.png" alt="" /></a>
+      <a href="index.html"><img src="logo.png" alt="" /></a>
       <nav class="navbar">
         <ul>
-          <li><a href="homepage.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="Artist.html">Artists</a></li>
           <li><a href="Album.html">Albums</a></li>
           <li><a href="songs.html">Songs</a></li>
@@ -35,34 +35,58 @@
         <li class="song">
           <div class="song-title">Public Service Announcement 2000</div>
           <div class="song-length">0:26</div>
-        <button class="add-to-playlist" data-name="Public Service Announcement" data-duration="0min 26sec">Add to Playlist</button>
-
+          <button
+            class="add-to-playlist"
+            data-name="Public Service Announcement"
+            data-duration="0min 26sec"
+          >
+            Add to Playlist
+          </button>
         </li>
         <li class="song">
           <div class="song-title">Kill You</div>
           <div class="song-length">4:24</div>
-        <button class="add-to-playlist" data-name="Kill You" data-duration="4min 24sec">Add to Playlist</button>
-
+          <button
+            class="add-to-playlist"
+            data-name="Kill You"
+            data-duration="4min 24sec"
+          >
+            Add to Playlist
+          </button>
         </li>
         <li class="song">
           <div class="song-title">Stan</div>
           <div class="song-length">6:44</div>
-        <button class="add-to-playlist" data-name="Stan" data-duration="6min 44sec">Add to Playlist</button>
-
+          <button
+            class="add-to-playlist"
+            data-name="Stan"
+            data-duration="6min 44sec"
+          >
+            Add to Playlist
+          </button>
         </li>
         <li class="song">
           <div class="song-title">Paul - Skit</div>
           <div class="song-length">0:11</div>
-        <button class="add-to-playlist" data-name="Paul - Skit" data-duration="0min 11sec">Add to Playlist</button>
-
+          <button
+            class="add-to-playlist"
+            data-name="Paul - Skit"
+            data-duration="0min 11sec"
+          >
+            Add to Playlist
+          </button>
         </li>
         <li class="song">
           <div class="song-title">Who Knew</div>
           <div class="song-length">3:48</div>
-          <button class="add-to-playlist" data-name="Who Knew" data-duration="3min 48sec">Add to Playlist</button>
-        
+          <button
+            class="add-to-playlist"
+            data-name="Who Knew"
+            data-duration="3min 48sec"
+          >
+            Add to Playlist
+          </button>
         </li>
-        
       </ul>
     </div>
     <footer>
@@ -88,32 +112,34 @@
     </footer>
   </body>
   <script>
-    const addToPlaylistButtons = document.querySelectorAll('.add-to-playlist');
-    addToPlaylistButtons.forEach(button => {
-        // remove the click event listener on the button
-        button.removeEventListener('click', null);
+    const addToPlaylistButtons = document.querySelectorAll(".add-to-playlist");
+    addToPlaylistButtons.forEach((button) => {
+      // remove the click event listener on the button
+      button.removeEventListener("click", null);
 
-        button.addEventListener('click', () => {
-            const name = button.getAttribute('data-name');
-            const duration = button.getAttribute('data-duration');
-            const song = {
-                name,
-                duration
-            };
-            let playlist = JSON.parse(localStorage.getItem('playlist')) || [];
+      button.addEventListener("click", () => {
+        const name = button.getAttribute("data-name");
+        const duration = button.getAttribute("data-duration");
+        const song = {
+          name,
+          duration,
+        };
+        let playlist = JSON.parse(localStorage.getItem("playlist")) || [];
 
-            // check if the song is already in the playlist
-            const songIndex = playlist.findIndex(item => item.name === name && item.duration === duration);
-            if (songIndex !== -1) {
-                alert('Song is already in the playlist!');
-                return;
-            }
+        // check if the song is already in the playlist
+        const songIndex = playlist.findIndex(
+          (item) => item.name === name && item.duration === duration
+        );
+        if (songIndex !== -1) {
+          alert("Song is already in the playlist!");
+          return;
+        }
 
-            playlist.push(song);
-            localStorage.setItem('playlist', JSON.stringify(playlist));
-            // alert('Song added to playlist!');
-        });
+        playlist.push(song);
+        localStorage.setItem("playlist", JSON.stringify(playlist));
+        // alert('Song added to playlist!');
+      });
     });
-</script>
+  </script>
   <script src="header_footer.js"></script>
 </html>

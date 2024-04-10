@@ -1,95 +1,84 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>BeatHive Search Engine</title>
     <!-- <link rel="stylesheet" type="text/css" href="s.css">
     -->
-    <link rel="stylesheet" type="text/css" href="search.css">
-    <link rel="stylesheet" type="text/css" href="header_footer.css">
-</head>
+    <link rel="stylesheet" type="text/css" href="search.css" />
+    <link rel="stylesheet" type="text/css" href="header_footer.css" />
+  </head>
 
-<body  style="background-image: url('Dark\,\ blurry\,\ simple\ background\,\ blue-green\ abstract\ background\ gradient\ blur\,\ Studio\ light_.jpeg');
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-size: cover;">
-
+  <body
+    style="
+      background-image: url('Dark\,\ blurry\,\ simple\ background\,\ blue-green\ abstract\ background\ gradient\ blur\,\ Studio\ light_.jpeg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    "
+  >
     <header class="header">
-        <a href="homepage.html"><img src="logo.png" alt=""></a>
-        <nav class="navbar">
-            <ul>
-                <li><a href="homepage.html">Home</a></li>
-                <li><a href="Artist.html">Artists</a></li>
-                <li><a href="Album.html">Albums</a></li>
-                <li><a href="songs.html">Songs</a></li>
-                <li><a style="color: aquamarine;" href="search.html">Search</a></li>
+      <a href="index.html"><img src="logo.png" alt="" /></a>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Artist.html">Artists</a></li>
+          <li><a href="Album.html">Albums</a></li>
+          <li><a href="songs.html">Songs</a></li>
+          <li><a style="color: aquamarine" href="search.html">Search</a></li>
           <li><a href="playlist.html">Playlist</a></li>
 
-                <li><a href="spotlight.html">Artist Spotlight</a></li>
+          <li><a href="spotlight.html">Artist Spotlight</a></li>
 
-
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
     </header>
-    <pre>
-
-
-
-
-
-
-
-
-        
-
-    </pre>
+    <pre></pre>
     <div id="search_header">
-        <h1 id="BeatHive_Search" >BeatHive Search Engine</h1>
-        <form id="search-form">
-            <input type="text" id="search-input" placeholder="Search...">
-            <button type="submit" id="search-button">Search</button>
-        </form>
-        <div id="filters">
-            <label for="duration-filter">Max Duration:</label>
-            <input type="number" id="duration-filter" min="1" max="60">
-            <label for="explicit-filter">Explicit:</label>
-            <select id="explicit-filter">
-                <option value="">Any</option>
-                <option value="explicit">Explicit Only</option>
-                <option value="cleaned">EXclude Explicit</option>
-            </select>
-            <button type="button" id="filter-button">Filter</button>
-            <button type="button" id="clear-button">Clear Filters</button>
-        </div>
+      <h1 id="BeatHive_Search">BeatHive Search Engine</h1>
+      <form id="search-form">
+        <input type="text" id="search-input" placeholder="Search..." />
+        <button type="submit" id="search-button">Search</button>
+      </form>
+      <div id="filters">
+        <label for="duration-filter">Max Duration:</label>
+        <input type="number" id="duration-filter" min="1" max="60" />
+        <label for="explicit-filter">Explicit:</label>
+        <select id="explicit-filter">
+          <option value="">Any</option>
+          <option value="explicit">Explicit Only</option>
+          <option value="cleaned">EXclude Explicit</option>
+        </select>
+        <button type="button" id="filter-button">Filter</button>
+        <button type="button" id="clear-button">Clear Filters</button>
+      </div>
     </div>
     <main>
-        <div id="results"></div>
+      <div id="results"></div>
     </main>
     <script src="search.js"></script>
-    <pre>
-
-
-
-
-
-
-
-
-    </pre>
+    <pre></pre>
     <footer>
-        <ul>
-            <p style="font-size: 23px;" >
-                <a style="padding: 5px;" href="about.html">About</a>
-                "Music is a higher form of knowledge than words." - Napoleon Bonaparte
-            </p>
-        </ul>
-        <div style="text-align: center;font-size: 26px;">
-            Made with &hearts; by <a style="font-size: 26px;padding: 5px;" href="https://www.linkedin.com/in/harsh-gupta-4ba4a7254">Harsh Gupta</a> <a
-                style="font-size: 26px;padding: 5px;" href="https://www.linkedin.com/in/tanishq-agarwal-a49609262"> Tanishq Agarwal</a>
-        </div>
+      <ul>
+        <p style="font-size: 23px">
+          <a style="padding: 5px" href="about.html">About</a>
+          "Music is a higher form of knowledge than words." - Napoleon Bonaparte
+        </p>
+      </ul>
+      <div style="text-align: center; font-size: 26px">
+        Made with &hearts; by
+        <a
+          style="font-size: 26px; padding: 5px"
+          href="https://www.linkedin.com/in/harsh-gupta-4ba4a7254"
+          >Harsh Gupta</a
+        >
+        <a
+          style="font-size: 26px; padding: 5px"
+          href="https://www.linkedin.com/in/tanishq-agarwal-a49609262"
+        >
+          Tanishq Agarwal</a
+        >
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
