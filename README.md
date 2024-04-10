@@ -1,7 +1,7 @@
-Live at
+Live at:
 
 ```
-https://harsh-gupta10.github.io/Beathive_Music_website/
+[https://harsh-gupta10.github.io/Beathive_Music_website/](https://harsh-gupta10.github.io/Beathive_Music_website/)
 ```
 
 Project Title: Internet Music Database Web Portal - BeatHive
